@@ -1,0 +1,318 @@
+/* Body Padding */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 80px;
+  background-color: #e7e3f0; /* Soft lilac background */
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #9966CC; /* Deep periwinkle */
+}
+
+.navbar-brand {
+  color: #cf1fcf; /* White color for the brand */
+}
+
+.nav-link {
+  color: #cf1fcf; /* White color for links */
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.nav-link.active {
+  color: white; /* Change the active link color to white */
+  background-color: #b289dc; /* Optional: Keep the hover background */
+}
+
+.nav-bold .nav-link {
+  font-weight: bold; /* Make text bold */
+}
+
+.nav-link:hover, .nav-link:active {
+  background-color: #b289dc; /* Light lilac on hover */
+}
+
+/* Logo */
+.logo {
+  color: rgb(228, 232, 239);
+  font-size: 30px;
+}
+
+.logo span {
+  color: #ffcc00; 
+}
+
+.profile-icon {
+  margin-left: 20px; /* Pushes the profile icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 24px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  padding-right: 10px; /* Adds space to the right of the icon */
+}
+
+.cart-icon {
+  margin-left: -20px; /* Pushes the cart icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 20px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  position: relative;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 500px; /* Adjust as needed */
+  padding: 10px;
+}
+
+.remove-btn, #clearCart {
+  background-color: purple; /* Set background color to purple */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.remove-btn:hover, #clearCart:hover {
+  background-color: darkpurple; /* Darken the background color on hover */
+}
+
+/* Banner Styles */
+.bg-img {
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  width: 100vw; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+  padding: 0px;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: -150px;
+}
+
+.banner-content {
+  padding-left: 20px/* Adjust this value as needed */
+}
+
+/* Hero Text */
+.hero-title {
+  font-size: 4.0rem;
+}
+
+.hero-text {
+  font-size: 3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ef70d3; /* Deep periwinkle */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  transition: background-color 0.3s;
+}
+
+/* Button Styles */
+.btn.shop-now-button {
+  background-color: #dc62c2; /* Deep periwinkle */
+  ; /* Initial background color */
+  color: #fff; /* Text color */
+  transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.btn.shop-now-button:hover {
+  background-color: #e715dc; /* Change color on hover */
+}
+
+/* Active state for the button (when clicked) */
+.btn.shop-now-button:active {
+  background-color: #df90bd; /* Darker shade when clicked */
+}
+
+.shop-now-button {
+  margin-top: 10px; /* Adjust this value for desired spacing */
+}
+
+
+/* Content Section */
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.text-section {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.product-image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Meow Tips Section in homepage */
+.meow-tips {
+  margin: 40px 0;
+  padding: 20px;
+  background-color: #d1c6e7; /* Soft lilac */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.meow-tips-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.view-more-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #6a5acd; /* Deep periwinkle */
+  color: #fff;
+  text-decoration: none;
+  border-radius: 20px;
+  margin-left: 20px;
+  transition: background-color 0.3s;
+}
+
+.view-more-button:hover {
+  background-color: #5a4cbf; /* Darker periwinkle on hover */
+}
+
+.tips-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.tip-item {
+  flex: 1 1 30%; /* Make items take up to 30% of the container, allowing for responsive adjustments */
+  text-align: center;
+  margin: 0 10px;
+}
+
+.tip-image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.article-title a {
+  color: #6a5acd; /* Deep periwinkle */
+  text-decoration: underline;
+  transition: color 0.3s;
+  font-size: 18px;
+}
+
+.article-title a:hover {
+  color: #5a4cbf; /* Darker periwinkle */
+}
+
+
+.footer {
+  margin-top: 20px; /* Ensure there's space above the footer */
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #9966CC; /* Deep periwinkle */
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.social-link {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px; /* Increase icon size */
+}
+
+.social-link:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section i {
+  margin-right: 8px; /* Space between icon and text */
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner-content {
+    padding-left: 10px; /* Adjust padding for smaller devices */
+  }
+
+  .hero-title {
+    font-size: 2.5rem; /* Smaller font sizes */
+  }
+
+  .hero-text {
+    font-size: 1.5rem;
+  }
+  .content {
+      flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .navbar {
+      padding: 10px 0;
+  }
+
+  .hero-title {
+      font-size: 2.5rem; /* Smaller font sizes */
+  }
+
+  .hero-text {
+      font-size: 1.5rem;
+  }
+
+  .article-title1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+      width: 80px;
+  }
+}

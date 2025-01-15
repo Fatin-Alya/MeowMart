@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeowMart</title>
+    <link rel="stylesheet" href="meow-tips.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+     <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <h1 class="logo">Meow<span>Mart.</span></h1>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto nav-bold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="food.html">Food</a></li>
+                        <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                        <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+                <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+            </ul>
+        </div>
+        
+        <div class="d-flex align-items-center">
+            <!-- Cart Icon -->
+            <div class="cart-icon position-relative me-3">
+                <i class="fas fa-shopping-cart" id="cartIcon"></i>
+                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </div>
+
+            <!-- Profile Icon -->
+            <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+    <div id="cartItems"></div>
+    <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="profileInfo" class="d-none">
+                    <h6>Profile Information:</h6>
+                    <p><strong>Name:</strong> <span id="profileName"></span></p>
+                    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                    
+                    <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+                </div>
+                <form id="profileForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <header class="header">
+    <h1>Meow Tips: Expert Advice for Happy, Healthy Cats</h1>
+    <p>Whether you're a new cat owner or a seasoned feline enthusiast, our Meow Tips page is your go-to source for all things related to cat care. 
+        From grooming and nutrition to understanding your cat's behavior, we provide expert tips and tricks to ensure your feline friend lives a long, 
+        happy, and healthy life. Explore our advice to create a purrfect environment for your cat and strengthen your bond with them every day.</p>
+  </header>
+
+    <!-- Tips Section -->
+    <div class="container my-5">
+        <div class="row gy-4">
+            <div class="col-md-6">
+                <div class="article-container">
+                    <img src="image/kuncing bunting.png" alt="Tip 1" class="tip-image">
+                    <h3 class="article-title">
+                        <a href="article1.html">How to take care of Bunting cat</a>
+                    </h3>
+                    <p>Fostering kitten is a wonderful experience. If you believe your cat is pregnant, providing her with the best care.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="article-container">
+                    <img src="image/wet vs dry food.jpeg" alt="Tip 2" class="tip-image">
+                    <h3 class="article-title">
+                        <a href="article2.html">Wet Food vs Dry food</a>
+                    </h3>
+                    <p>As cat owners, we will try to give the best of our cats.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="article-container">
+                    <img src="image/Grooming.jpg" alt="Tip 3" class="tip-image">
+                    <h3 class="article-title">
+                        <a href="article3.html">Grooming Tips for Cats</a>
+                    </h3>
+                    <p>Grooming is important for your cat's hygiene. Here are some grooming tips.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="article-container">
+                    <img src="image/Exercise banner.jpeg" alt="Tip 4" class="tip-image">
+                    <h3 class="article-title">
+                        <a href="article4.html">Exercise for Cats</a>
+                    </h3>
+                    <p>Ensure your home is safe for your cat with these tips.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+                <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

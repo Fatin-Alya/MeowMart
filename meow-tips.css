@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Navigation Styles */
+.navbar {
+    background-color: #9966CC; /* Deep periwinkle */
+  }
+  
+  .navbar-brand {
+    color: #cf1fcf; /* White color for the brand */
+  }
+  
+  .nav-link {
+    color: #cf1fcf; /* White color for links */
+    font-size: 2rem;
+    padding: 15px;
+  }
+  
+  .nav-link.active {
+    color: white; /* Change the active link color to white */
+    background-color: #b289dc; /* Optional: Keep the hover background */
+  }
+  
+  .nav-bold .nav-link {
+    font-weight: bold; /* Make text bold */
+  }
+  
+  .nav-link:hover, .nav-link:active {
+    background-color: #b289dc; /* Light lilac on hover */
+  }
+  
+  /* Logo */
+  .logo {
+    color: rgb(228, 232, 239);
+    font-size: 30px;
+  }
+  
+  .logo span {
+    color: #ffcc00; 
+  }
+  
+  .profile-icon {
+    margin-left: 20px; /* Pushes the profile icon to the left */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 24px; /* Increases the size of the icon */
+    color: #efeaef; /* Icon color */
+    padding-right: 10px; /* Adds space to the right of the icon */
+  }
+  
+  .cart-icon {
+    margin-left: -20px; /* Pushes the cart icon to the left */
+    cursor: pointer; /* Changes cursor to pointer */
+    font-size: 20px; /* Increases the size of the icon */
+    color: #efeaef; /* Icon color */
+    position: relative;
+  }
+  
+  .cart-dropdown {
+    position: absolute;
+    top: px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 500px; /* Adjust as needed */
+    padding: 10px;
+  }
+  
+  .remove-btn, #clearCart {
+    background-color: purple; /* Set background color to purple */
+    color: white; /* Set text color to white */
+    border: none; /* Remove border */
+    padding: 10px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer */
+  }
+  
+  .remove-btn:hover, #clearCart:hover {
+    background-color: darkpurple; /* Darken the background color on hover */
+  }
+
+  .header {
+    padding: 100px 0; 
+    text-align: center; 
+    margin-bottom: -170px;
+  }
+  
+  .header p {
+    font-size: 1rem; 
+    color: #333; 
+    margin-top: 1rem; 
+  }
+
+/* Meow tips page */
+.row {
+    justify-content: center; /* Center the columns horizontally */
+  }
+  
+  .col-md-6 {
+    text-align: center; /* Center text inside the column */
+    margin-bottom: 20px; /* Add some space between rows */
+  }
+  
+  .article-container {
+    border: 1px solid #ddd; /* Border */
+    border-radius: 10px; /* Border radius */
+    padding: 10px; /* Padding */
+    background-color: #f9f9f9; /* Background color */
+    transition: box-shadow 0.3s; /* Transition for hover effect */
+    width: 100%; /* Set the width to 80% of the parent */
+    max-width: 500px; /* Set a maximum width */
+    margin: 0 auto; /* Center the container */
+  }
+  
+  .article-container:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Shadow on hover */
+  }
+  
+  .col-md-6 img {
+    width: 100%; /* Adjust the width as needed */
+    max-width: 300px; /* Set a maximum width for larger displays */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Create a round shape */
+    margin: 0 auto; /* Center the image */
+    display: block; /* Ensure the image is treated as a block element */
+  }
+  
+  .img-fluid {
+    display: block; /* Ensure images are block elements for centering */
+    margin: 0 auto; /* Center images */
+  }
+
+/* Footer Styles */
+.footer {
+    background-color:#9966CC;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .social-link {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px; /* Increase icon size */
+  }
+  
+  .social-link:hover {
+    color: #ffcc00; /* Change color on hover */
+  }
+  
+  .footer-section p {
+    margin: 5px 0;
+  }
+  
+  .footer-section i {
+    margin-right: 8px; /* Space between icon and text */
+  }

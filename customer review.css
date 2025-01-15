@@ -1,0 +1,224 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: #9966CC; /* Deep periwinkle */
+}
+
+.navbar-brand {
+  color: #cf1fcf; /* White color for the brand */
+}
+
+.nav-link {
+  color: #cf1fcf; /* White color for links */
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.nav-link.active {
+  color: white; /* Change the active link color to white */
+  background-color: #b289dc; /* Optional: Keep the hover background */
+}
+
+.nav-bold .nav-link {
+  font-weight: bold; /* Make text bold */
+}
+
+.nav-link:hover, .nav-link:active {
+  background-color: #b289dc; /* Light lilac on hover */
+}
+
+/* Logo */
+.logo {
+  color: rgb(228, 232, 239);
+  font-size: 30px;
+}
+
+.logo span {
+  color: #ffcc00; 
+}
+
+.profile-icon {
+  margin-left: 20px; /* Pushes the profile icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 24px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  padding-right: 10px; /* Adds space to the right of the icon */
+}
+
+.cart-icon {
+  margin-left: -20px; /* Pushes the cart icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 20px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  position: relative;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 500px; /* Adjust as needed */
+  padding: 10px;
+}
+
+.remove-btn, #clearCart {
+  background-color: purple; /* Set background color to purple */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.remove-btn:hover, #clearCart:hover {
+  background-color: darkpurple; /* Darken the background color on hover */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.section__container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.header p {
+  letter-spacing: 2px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.header h1 {
+  font-family: "Noto Serif", serif;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.card {
+  padding: 2rem;
+  display: grid;
+  gap: 1rem;
+  background-color: #ffffff; /* Light background for cards */
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.card i {
+  font-size: 2.5rem;
+  color: gold;
+}
+
+.card p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.card hr {
+  width: 40px;
+  margin: auto;
+  color: var(--text-light);
+}
+
+.card img {
+  width: 60px;
+  height: 60px;
+  margin: auto;
+  border-radius: 100%;
+  border: 1px solid var(--primary-color);
+}
+
+.card .name {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.card .name:hover {
+  color: var(--primary-color);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: #9966CC; /* Deep periwinkle */
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+  width: 100vw; /* Full width of the viewport */
+  margin: 0; /* Remove any default margins */
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px; /* Optional: Center the content within the footer */
+  margin: auto;
+  padding: 0 1rem; /* Optional: Add some padding for the inner content */
+}
+
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.social-link {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px; /* Increase icon size */
+}
+
+.social-link:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+      width: 80px;
+  }
+}

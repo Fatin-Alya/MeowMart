@@ -1,0 +1,198 @@
+/* Body Padding */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 0px;
+  background-color: #e0f7fa; /* Light blue background */
+}
+
+
+/* Navigation Styles */
+.navbar {
+  background-color: #9966CC; /* Deep periwinkle */
+}
+
+.navbar-brand {
+  color: #cf1fcf; /* White color for the brand */
+}
+
+.nav-link {
+  color: #cf1fcf; /* White color for links */
+  font-size: 2rem;
+  padding: 15px;
+}
+
+.nav-link.active {
+  color: white; /* Change the active link color to white */
+  background-color: #b289dc; /* Optional: Keep the hover background */
+}
+
+.nav-bold .nav-link {
+  font-weight: bold; /* Make text bold */
+}
+
+.nav-link:hover, .nav-link:active {
+  background-color: #b289dc; /* Light lilac on hover */
+}
+
+/* Logo */
+.logo {
+  color: rgb(228, 232, 239);
+  font-size: 30px;
+}
+
+.logo span {
+  color: #ffcc00; 
+}
+
+.profile-icon {
+  margin-left: 20px; /* Pushes the profile icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 24px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  padding-right: 10px; /* Adds space to the right of the icon */
+}
+
+.cart-icon {
+  margin-left: -20px; /* Pushes the cart icon to the left */
+  cursor: pointer; /* Changes cursor to pointer */
+  font-size: 20px; /* Increases the size of the icon */
+  color: #efeaef; /* Icon color */
+  position: relative;
+}
+
+.cart-dropdown {
+  position: absolute;
+  top: px; /* Adjust as needed */
+  right: 20px; /* Adjust as needed */
+  background-color: white;
+  border: 1px solid #ccc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 500px; /* Adjust as needed */
+  padding: 10px;
+}
+
+.remove-btn, #clearCart {
+  background-color: purple; /* Set background color to purple */
+  color: white; /* Set text color to white */
+  border: none; /* Remove border */
+  padding: 10px; /* Add padding */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.remove-btn:hover, #clearCart:hover {
+  background-color: darkpurple; /* Darken the background color on hover */
+}
+
+
+/*full article*/
+body.article3 {
+  background-color: #d4ccec; /* Baby blue */
+  font-family: 'Arial', sans-serif; /* Add a clean font */
+}
+
+/* Centering the article title and image */
+.article-title1 {
+  text-align: center; 
+  margin: 10px 0; /* Adjust margins for spacing */
+  font-size: 2.5rem; /* Increase font size */
+  color: #333; /* Dark color for better contrast */
+}
+
+.article-image1 {
+  display: block;          /* Make the image a block element */
+  margin: 10px auto;     /* Center the image horizontally */
+  max-width: 100%;       /* Make image responsive */
+  height: auto;          /* Maintain aspect ratio */
+  border-radius: 10px;   /* Optional: round the corners */
+}
+
+/* Article content styling */
+.article-content {
+  background-color: #ffffff; /* White background for content */
+  padding: 20px; /* Add padding for better spacing */
+  border-radius: 10px; /* Optional: round the corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  margin: 20px auto; /* Space above the content */
+  max-width: 800px;
+}
+
+
+.dotted-line {
+  border: none;                /* Remove default border */
+  border-top: 10px dotted #fd09f9; /* Set a dotted top border */
+  margin: 20px 0;             /* Add vertical spacing */
+}
+
+.footer {
+  margin-top: 20px; /* Ensure there's space above the footer */
+}
+
+
+/* Footer Styles */
+.footer {
+  background-color:#9966CC;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 10px;
+}
+
+.social-link {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 24px; /* Increase icon size */
+}
+
+.social-link:hover {
+  color: #ffcc00; /* Change color on hover */
+}
+
+.footer-section p {
+  margin: 5px 0;
+}
+
+.footer-section i {
+  margin-right: 8px; /* Space between icon and text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column; /* Stack on smaller screens */
+  }
+
+  .navbar {
+      padding: 10px 0;
+  }
+
+  .hero-title {
+      font-size: 2.5rem; /* Smaller font sizes */
+  }
+
+  .hero-text {
+      font-size: 1.5rem;
+  }
+
+  .article-title1 {
+    font-size: 2rem; /* Smaller font size for mobile */
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-brand img {
+      width: 80px;
+  }
+}

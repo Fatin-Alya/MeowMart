@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeowMart</title>
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body class="article3">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <h1 class="logo">Meow<span>Mart.</span></h1>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto nav-bold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="food.html">Food</a></li>
+                        <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                        <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+                <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+            </ul>
+        </div>
+        <div class="d-flex align-items-center">
+            <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </div>
+  </nav>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+      <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <h1 class="logo">Meow<span>Mart.</span></h1>
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto nav-bold">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="food.html">Food</a></li>
+                      <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                      <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+              <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+          </ul>
+      </div>
+      
+      <div class="d-flex align-items-center">
+          <!-- Cart Icon -->
+          <div class="cart-icon position-relative me-3">
+              <i class="fas fa-shopping-cart" id="cartIcon"></i>
+              <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+              </span>
+          </div>
+
+          <!-- Profile Icon -->
+          <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+              <i class="fas fa-user-circle"></i>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+  <div id="cartItems"></div>
+  <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="profileInfo" class="d-none">
+                  <h6>Profile Information:</h6>
+                  <p><strong>Name:</strong> <span id="profileName"></span></p>
+                  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                  
+                  <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+              </div>
+              <form id="profileForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Article Section -->
+  <div class="container mt-5 pt-5">
+    <h2 class="article-title1">Wet Cat Snacks vs Dry Cat Snacks</h2>
+    <img src="image/wet vs dry food.jpeg" alt="Kuncing bunting" class="article-image1">
+    <div class="article-content">
+      <p>As cat owners, we will strive to provide the best for our furry friends. Therefore, the selection of snacks will also be an 
+        important factor in pampering our furry friends, just like us as humans who enjoy enjoying various types of food. However, 
+        there are many options available out there, such as lick-type cat food products, squeeze-type, dehydrated and so on, so which one is the best? 
+        The constant question about wet and dry cat food also adds to the confusion of the public, especially those who are new to cat owners.</p>
+
+        <p>Are you also wondering which is better for cats, wet or dry snacks? What type of food is healthy for your cat? Don't worry, 
+           this article will help you. We will delve further into this topic, exploring the benefits of both wet and dry cat food.
+           Let's strengthen our bond with our cat by choosing the best food for our cat.</p>
+
+      <h3><strong>Wet Cat Snacks</strong></h3>
+      <p>What is meant by wet cat food? Wet cat food comes in a variety of textures, some are available in cans, and most are soft. Canned food will be in the form of chunks with gravy, paste, or ground meat. For cats that prefer softer foods, products such as licks or chews with a soft, easy-to-chew texture are a good choice. Licks come in a variety of delicious flavors, while chews are formulated with more enjoyable packages, further enriching the happy moments between cat owners and their furry friends.:</p>
+
+      <p>Wet cat food has a higher water content than dry food and usually has a moist texture that cats love. This is beneficial because it can keep cats hydrated, especially those who are not drinking enough water. For cats with dental problems, wet cat food is a better choice because it is easy to chew. However, wet cat food has a short shelf life once the package is opened.</p>
+        
+      <hr class="dotted-line">
+
+      <h3><strong>Dry Cat Food</strong></h3>
+      <p>Dry cat food comes in a dry and crunchy texture. Its low water content allows it to be stored for a longer period of time, making it a better choice in terms of cost. Dry food with a crunchy texture is also effective in keeping your cat's teeth clean and reducing the formation of tartar and plaque. However, dry cat food may not be suitable for older cats with dental problems. Meanwhile, dry cat food has a higher energy density than wet cat food. Dry cat food comes in various types such as biscuits, pellets, dehydrated food, and freeze-dried food.</p>
+
+      <p>You've probably heard of biscuits and pellets specially formulated for cats, but have you heard of dehydrated and freeze-dried cat food? Freeze-dried cat food is prepared using low temperatures to remove moisture without damaging the nutrients. Meanwhile, the dehydrated cat food process uses hot air to remove moisture from the food, which can damage the nutrients. Dehydrated food will appear darker than freeze-dried food. The choice between these two types of food can be made based on your pet's health condition. Next, we will help you learn more about the benefits of wet and dry cat food, and guide you to make the best choice.</p>
+      
+      <h3><strong>What are the benefits of wet cat snacks?</strong></h3>
+      <ul>
+            <li><strong>Improves hydration</strong></li>
+            <p>Hydration is essential for your cat's health, which can affect their skin and organs. Wet cat food with a high water content 
+                can help maintain your cat's hydration levels, especially for cats that don't like to drink water or don't drink enough. 
+                Additionally, the moisture content in wet cat food also makes it easier to digest and prevents hairballs. It can also help 
+                prevent urinary tract issues, making your cat's overall health better.</p>
+            
+            <li><strong>Nutritional Supplement</strong></li>
+            <p>Wet cat food offers an important nutritional boost in addition to hydrating your cat. Available in a variety of flavors, 
+                such as chicken, salmon, and other high-protein varieties, wet cat food usually contains additional nutrients for your pet. 
+                By feeding wet food, your cat will be supplied with essential vitamins and minerals. These complementary nutrients can be of great benefit, 
+                especially if your cat's diet requires certain nutrients or additional nutrients.</p>
+
+            <li><strong>Delicious to eat</strong></li>
+            <p>Wet food comes in a variety of flavors, textures, and aromas, which are both delicious and appealing to cats. Since cats are carnivores
+                 and are attracted to the smell of meat, wet food will usually make your cat more willing to eat. Thus, your cat will have a balanced diet, 
+                 containing all the nutrients it needs.</p>
+
+            <li><strong>Weight Management</strong></li>
+            <p>Generally, wet cat snacks and food have lower calorie values ​​than dry cat food due to their high water content. Therefore, 
+                wet food is better if you want to manage your cat's weight. However, you should seek advice from a veterinarian regarding
+                 this matter based on your cat's age, weight, and health status.</p>
+
+        </ul> 
+
+        <h3><strong>What Are the Benefits of Dry Cat Snacks?</strong></h3>
+        <p>Here are some of the main benefits of dry cat food:</p>
+      
+        <ul>
+
+          <li><Strong>Dental Fygiene</Strong></li>
+          <p>Dry food can indirectly clean your cat's teeth. The texture of dry cat food makes your cat chew, thus cleaning its teeth mechanically. 
+            The act of chewing can reduce the buildup of plaque and tartar on your cat's teeth, which can lead to gum problems, tooth decay, and bad breath if ignored.</p>
+          
+          <li><Strong>Long Storage Period</Strong></li>
+          <p>Dry cat food has a longer shelf life because it does not contain water, thus preventing the growth of bacteria and mold. 
+            Therefore, dry food can be stored more easily and for a long time, unlike wet food which may need to be kept in the refrigerator. 
+            The long shelf life makes dry food a more pleasant choice for cat owners.</p>        
+          
+          <li><Strong>Managing Odors</Strong></li>
+          <p>Dry cat food with a low moisture content will have less odor than wet food. This dry food is suitable for cat owners who may 
+            be sensitive or want to minimize the presence of strong odors in their environment.</p>
+
+          <li>Enriching the Meal Process</li>
+          <p>Dry cat food is easier to enrich. You can put dry food in toys to make your cat work harder and mentally stimulate 
+            him to get the food. In addition, the attractive shape and taste of dry food also make it an effective tool for play or 
+            training sessions. Unlike regular cat food, dry food can attract your cat's attention and enrich the process of eating the food.</p>
+        </ul>
+      
+        <h3><strong>Which is Better - Wet or Dry Cat Food?</strong></h3>
+        <p>When it comes to choosing cat food, cat owners will inevitably ask whether wet or dry food is better, and this question seems endless. 
+            This is because the right answer will depend on your cat's preferences and condition. A combination of wet and dry snacks is generally recommended. 
+            It ensures that your cat will stay hydrated with wet food, and dental hygiene can be maintained with dry food, while ensuring that their health and 
+            appetite for food are still maintained.</p>
+
+        <p>Cats are neophiliacs, meaning they like to try new things. Therefore, a combination of different textures and flavors of food can create variety 
+            in your cat's routine. A combination of wet and dry snacks will ensure your cat is always hungry. However, some cats may have certain sensitivities 
+            or health problems, so you need to monitor your cat's reaction to certain foods. You can also seek advice from a veterinarian to design a diet that 
+            is appropriate for your cat's condition.</p>
+        
+
+        <h3><strong>Frequently ask question</strong></h3>
+        <ul>
+
+          <li><strong>What should I feed my cat? Wet or dry snacks?</strong></li>
+          <p>Both types of food have their own advantages. Your choice should be based on your cat's preferences and health status. A combination of wet and 
+            dry snacks is generally recommended to keep your cat hydrated through wet food, and keep their teeth clean through dry food. Choosing the right 
+            food is important for your cat's well-being.</p>
+
+          <li><strong>Are wet snacks good for cats?</strong></li>
+          <p>Yes, wet food has its advantages for cats. The high moisture content can ensure that your cat stays hydrated. For cats with dental problems, 
+            wet food is ideal because it is easier to chew. It is also good for managing your cat's weight due to its low calorie content. The variety of 
+            flavors and strong smell of wet food will definitely make your cat more appetizing. However, for cats with sensitivities or health problems, 
+            you should monitor your cat's reactions and seek advice from a veterinarian regarding the diet for your pet.</p>
+         
+          <li><strong>Are dry snacks good for cats?</strong></li>
+          <p>Yes, dry food is good for cats. Dry cat food has a longer shelf life and is easy to store, making it more cost-effective. Dry food has a 
+            crunchy texture, so it can indirectly help clean your cat's teeth.</p>
+          
+          <li><strong>Can I serve both dry and wet cat snacks?</strong></li>
+          <p>Providing both types of food is ideal and recommended. This is because it can keep your cat hydrated while also keeping their teeth clean. 
+            The variety of textures and flavors of both types of food can also create variety in your cat's diet, thus ensuring that your cat does not 
+            lose interest in any one food.</p>
+          
+          <li><strong>Can cats survive on dry snacks only?</strong></li>
+          <p>Yes, but it is not recommended. Dry cat food has a lower water content, thus can cause dehydration. We must ensure that the pet takes in enough water. 
+            You are also advised to prioritize regular meals of regular food for the overall well-being of your cat.</p>
+        </ul>
+      </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

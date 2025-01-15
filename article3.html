@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cats Grooming</title>
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body class="article3">
+
+  <!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+      <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <h1 class="logo">Meow<span>Mart.</span></h1>
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto nav-bold">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="food.html">Food</a></li>
+                      <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                      <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+              <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+          </ul>
+      </div>
+      
+      <div class="d-flex align-items-center">
+          <!-- Cart Icon -->
+          <div class="cart-icon position-relative me-3">
+              <i class="fas fa-shopping-cart" id="cartIcon"></i>
+              <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+              </span>
+          </div>
+
+          <!-- Profile Icon -->
+          <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+              <i class="fas fa-user-circle"></i>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+  <div id="cartItems"></div>
+  <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="profileInfo" class="d-none">
+                  <h6>Profile Information:</h6>
+                  <p><strong>Name:</strong> <span id="profileName"></span></p>
+                  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                  
+                  <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+              </div>
+              <form id="profileForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Article Section -->
+  <div class="container mt-5 pt-5">
+    <h2 class="article-title1">Why is Grooming Important for Cats?</h2>
+    <img src="image/Grooming.jpg" alt="Cat Grooming" class="article-image1">
+    <div class="article-content">
+      <h3>Cat Hair Grooming</h3>
+      <p>The answer is yes, it is very important. Grooming can prevent cats from skin diseases and parasites in the cat's body and help tidy up its fur. Instinctively, cats like to clean themselves by licking their bodies to remove dirt and tidy up tangled fur. However, cats with long fur will cause hairballs to form in their stomachs. If these hairballs accumulate in large numbers in the cat's stomach, this will cause blockage in its intestines. Therefore, grooming can prevent cats from forming hairballs and help cats tidy up their long fur. In addition, it is important to trim your cat's fur if its fur is too long because thick and long fur can cause flea breeding and skin problems.</p>
+
+      <h3>Cat Ear Cleaning</h3>
+      <p>Washing or cleaning your cat's ears is also important in grooming. If the cat's ears become too dirty, it will encourage the breeding of fleas in the ears. So it is better to clean your cat's ears regularly. As for nail care, it depends on your cat's daily life. If your cat is always outside, then you can leave its nails sharp as a defensive weapon. However, if your cat is always indoors, it is better to have its nails trimmed to prevent the nails from growing too long and you can save the sofa at home.</p>
+
+      <p>There are various ways to groom a cat such as brushing, bathing, clipping nails and so on. If you are not confident about bathing your cat at home, you can send your cat to any veterinary clinic that provides grooming services such as Kitty's Care Clinic. Apart from bathing your cat, you can comb your cat's fur especially if it has long fur. This can straighten the fur and reduce tangles and hair loss.</p>
+
+      <h3>Do I Need to Groom My Cat Often?</h3>
+      <p>As for the frequency of cat grooming, it depends on the type of fur of your cat. If your cat has thick and long hair like a Persian cat, it is recommended to take it for grooming every 4 to 6 weeks. However, if your cat has short hair like a Siamese cat, grooming every 8 to 12 weeks is sufficient. However, if during this period your cat looks dirty or its nails have grown sharp, then you can take it for grooming again.</p>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

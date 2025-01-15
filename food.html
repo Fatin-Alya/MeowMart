@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeowMart</title>
+    <link rel="stylesheet" href="food.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-fluid">
+        <div class="d-flex align-items-center">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">
+                <h1 class="logo">Meow<span>Mart.</span></h1>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto nav-bold">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="food.html">Food</a></li>
+                        <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                        <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+                <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+            </ul>
+        </div>
+        
+        <div class="d-flex align-items-center">
+            <!-- Cart Icon -->
+            <div class="cart-icon position-relative me-3">
+                <i class="fas fa-shopping-cart" id="cartIcon"></i>
+                <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
+            </div>
+
+            <!-- Profile Icon -->
+            <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+    <div id="cartItems"></div>
+    <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div id="profileInfo" class="d-none">
+                    <h6>Profile Information:</h6>
+                    <p><strong>Name:</strong> <span id="profileName"></span></p>
+                    <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                    
+                    <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+                </div>
+                <form id="profileForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+    <h2 class="text-center my-4">Purr-fectly Nutritious: Premium Cat Food for Every Feline</h2>
+
+    <div class="row">
+        <div class="card">
+            <span class="label">Best seller</span>
+            <div class="content">
+                <img src="image/food1.jpeg" alt="Open Farm Homestead Turkey & Chicken Dry Cat Food">
+                <div class="info">
+                    <h4>Open Farm Homestead Turkey & Chicken Dry Cat Food</h4>
+                    <ul>
+                        <li>The primary four ingredients are rich in animal proteins.</li>
+                        <li>It includes poultry that is humanely raised and fish that is sustainably sourced.</li>
+                        <li>It does not contain any animal by-products or artificial additives.</li>
+                    </ul>
+                    <div class="price">RM 70.90</div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <button class="cart-btn mt-2">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="content">
+                <img src="image/food2.webp" alt="FirstMate Chicken Meal with Blueberries Formula">
+                <div class="info">
+                    <h4>Goodbowl™ Wild-Caught Salmon & Brown Rice Recipe for Cats</h4>
+                    <ul>
+                        <li>Wholesome nutrition made with meticulously sourced, simple ingredients</li>
+                        <li>Rich in animal protein to provide nutrition your cat will crave</li>
+                        <li>Source of prebiotic fibers to support healthy digestion.</li>
+                    </ul>
+                    <div class="price">RM 50.00</div>
+                    <div class="rating">⭐⭐⭐⭐</div>
+                    <button class="cart-btn mt-2">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="card">
+            <div class="content">
+                <img src="image/food3.webp" alt="Wild-Caught Salmon Dry Cat Food">
+                <div class="info">
+                    <h4>Wild-Caught Salmon Dry Cat Food</h4>
+                    <ul>
+                        <li>High in protein</li>
+                        <li>Source of prebiotic fibres to support healthy digestion</li>
+                        <li>No rendered poultry or meat meals</li>
+                        <li>100% traceable ingredients</li>
+                    </ul>
+                    <div class="price">RM 45.99</div>
+                    <div class="rating">⭐⭐⭐⭐⭐</div>
+                    <button class="cart-btn mt-2">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+            <div class="card">
+                <div class="content">
+                    <img src="image/food5.jpg" alt="Dave's Pet Food Naturally Healthy Grain-Free Tuna & Salmon Dinner Canned Cat Food">
+                    <div class="info">
+                        <h4>Catch-of-the-Season Whitefish Dry Cat Food</h4>
+                        <ul>
+                            <li>High in protein</li>
+                            <li>100% traceable ingredients</li>
+                            <li>Source of prebiotic fibres to support healthy digestion</li>
+                        </ul>
+                        <div class="price">RM 45.99</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <button class="cart-btn mt-2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <span class="label">Best for kitten</span>
+                <div class="content">
+                    <img src="image/food4.webp" alt="Open Farm Homestead Turkey & Chicken Dry Cat Food">
+                    <div class="info">
+                        <h4>Kitten Grain-Free RawMix Recipe</h4>
+                        <ul>
+                            <li>Nutritious blend of humanely raised harvest chicken, homestead turkey and wild-caught salmon </li>
+                            <li>High protein kibble, packed with natural nutrition tailored for kittens</li>
+                            <li>All fish Ocean Wise recommended</li>
+                        </ul>
+                        <div class="price">RM 49.99</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <button class="cart-btn mt-2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="card">
+                <div class="content">
+                    <img src="image/food6.jpg" alt="Open Farm Homestead Turkey & Chicken Dry Cat Food">
+                    <div class="info">
+                        <h4>Kitten Grain-Free Dry Cat Food</h4>
+                        <ul>
+                            <li>High-quality meats raised without antibiotics.</li>
+                            <li>Increased nutrient density with added protein and fat to support healthy growth</li>
+                            <li>Vitamin A and Taurine to support vision and healthy heart function</li>
+                        </ul>
+                        <div class="price">RM 49.99</div>
+                        <div class="rating">⭐⭐⭐⭐⭐</div>
+                        <button class="cart-btn mt-2">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+</div>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

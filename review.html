@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MeowMart</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="customer review.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+      <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <h1 class="logo">Meow<span>Mart.</span></h1>
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto nav-bold">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="food.html">Food</a></li>
+                      <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                      <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+              <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+          </ul>
+      </div>
+      
+      <div class="d-flex align-items-center">
+          <!-- Cart Icon -->
+          <div class="cart-icon position-relative me-3">
+              <i class="fas fa-shopping-cart" id="cartIcon"></i>
+              <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+              </span>
+          </div>
+
+          <!-- Profile Icon -->
+          <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+              <i class="fas fa-user-circle"></i>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+  <div id="cartItems"></div>
+  <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="profileInfo" class="d-none">
+                  <h6>Profile Information:</h6>
+                  <p><strong>Name:</strong> <span id="profileName"></span></p>
+                  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                  
+                  <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+              </div>
+              <form id="profileForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<div class="section__container">
+    <div class="header">
+        <h1>What our clients say about our product.</h1>
+    </div>
+
+    <!-- Testimonials Carousel -->
+  <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        
+        <div class="row">
+            <div class="col">
+                <div class="card" data-category="cat-food" data-rating="4.5">
+                  <div class="review">
+                    <div class="review-header">
+                        <img src="image/profile2.jpeg" alt="Profile" class="profile-img">
+                        <div class="review-info">
+                            <h5>Riana Rahman</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">My cat has been throwing up every day she doesn't like blue cat food anymore. She initially had issues with it because the size is awkward. 
+                        So after doing some research, I decided to try Open Farms Salmon flavor cat food. It has easy to chew, small size, and 
+                         from the second I put it in her dish, she was all over it.</p>
+                </div>
+                </div>
+              </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-food" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile5.webp" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Danial</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">I have tried every brand of healthy, expensive, good for my cat dry food. They always end up going back to 
+                    some cheap brand because they turn away from the "good stuff" I was willing to try this Open Farm Catch of the season whitefish dry food. 
+                    My boys prefer fish flavored cat food over chicken or other bird flavors.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-food" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile6.jpeg" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Nurina</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">My cat seems to have an intolerance to chicken and has been very itchy with allergic hives and scabs.
+                After a couple days on this, she not only loves it, but her hives, itches, and scabs seem to be less. The ingredients are wonderful,
+                no pea proteins, no potatoes, no chicken. For the quality of product, although the price seems high, it is so worth it.</p>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!--Toys-->
+      <div class="carousel-item">
+        <div class="row">
+            <div class="col">
+                <div class="card" data-category="cat-toys" data-rating="4.5">
+                  <div class="review">
+                    <div class="review-header">
+                        <img src="image/profile8.jpg" alt="Profile" class="profile-img">
+                        <div class="review-info">
+                            <h5>Huda</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">Bought this as a Christmas pressie for my friend's cat to keep her occupied during the day and also, 
+                        to make her work for her food and eat more slowly as opposed to gobbling the lot up in seconds! Also, improves cognitive 
+                        function and dexterity in elderly cats. Suffice to say, it was a tremendous success - Kisha loves her new toy!!!</p>
+                </div>
+                </div>
+              </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-toys" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile9.jpg" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Alya</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <<i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">This is a great way of stopping a cat gobbling up their dried food or treats. This is the third type of 
+                    "toy" like this we've tried and it's been the most successful as she's a large cat and this is fairly sturdy. She enjoys spinning 
+                    the little canisters and pushing the treats through the spikes which isn't easy with big fat Maine Coon feet.</p>
+            </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-toys" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile7.jpg" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Afnan</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">This is very good and offers three levels of use. Our cat soon got the idea but hasn't fully mastered 
+                    the quickest way to empty it so is still kept very amused. It is also good for slowing down eating even as a toy. I think the 
+                    base could be bigger and A-frame posts spread wider, to perhaps the corners of the base, to make the toy even more steady</p>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+        <!--Litter-->
+      <div class="carousel-item">
+        <div class="row">
+            <div class="col">
+                <div class="card" data-category="cat-litter" data-rating="4.5">
+                  <div class="review">
+                    <div class="review-header">
+                        <img src="image/profile2.jpeg" alt="Profile" class="profile-img">
+                        <div class="review-info">
+                            <h5>Syahirah</h5>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="review-comment">I am a founder/director of a nonprofit for animal-welfare for over 25 years now. Because of the greater 
+                        number of cats in our area, No. California, they are the primary ones that come into our shelter (my home). World's Best Litter 
+                        is by far the cleanest, safest, easiest-to-use, and least-smelly litter; plus I never have to empty it all just add to it after scooping. 
+                        I send adopters home with a bag if I have any extra.</p>
+                </div>
+                </div>
+              </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-litter" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile5.webp" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Danni</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">I've been using the multi-cat litter in the red bag for many years now. During that time I must confess that I 
+                    tried other products a couple of times but quickly switched back to WBCL. My last auto-delivery was an multi-cat orange bag either by 
+                    mistake or the orange is the new red. Turns out the red was out of stock so they sent the orange. I'm staying with the orange bag because 
+                    it seems to work better for MANY cats. </p>
+            </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card" data-category="cat-litter" data-rating="4.5">
+              <div class="review">
+                <div class="review-header">
+                    <img src="image/profile6.jpeg" alt="Profile" class="profile-img">
+                    <div class="review-info">
+                        <h5>Farhah</h5>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+                <p class="review-comment">Initially I was like "ew clay litter I'm not using that". I used some of the more expensive non-clay litters 
+                    (Okocat, Sustainably Yours) in the past and they all stunk like you described. I took a chance on TidyCats Free and Clean Unscented 
+                    litter and it's the absolute best I've ever used. Literally no smells at all even after a month when I'm due to replace all the litter 
+                    in the box. It has little charcoal pieces in it which I think helps. And it's cheap!</p>
+            </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div> 
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h4>Contact Us</h4>
+            <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+            <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+        </div>
+        <div class="footer-section">
+            <h4>Follow Us</h4>
+            <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>

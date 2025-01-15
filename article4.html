@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MeowMart</title>
+  <link rel="stylesheet" href="article.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+</head>
+<body class="article3">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container-fluid">
+      <div class="d-flex align-items-center">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">
+              <h1 class="logo">Meow<span>Mart.</span></h1>
+          </a>
+      </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto nav-bold">
+              <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+              <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown">Product</a>
+                  <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="food.html">Food</a></li>
+                      <li><a class="dropdown-item" href="toys.html">Toys</a></li>
+                      <li><a class="dropdown-item" href="litter.html">Litter</a></li>
+                  </ul>
+              </li>
+              <li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
+              <li class="nav-item"><a class="nav-link" href="meow-tips.html">Meow Tips</a></li>
+          </ul>
+      </div>
+      
+      <div class="d-flex align-items-center">
+          <!-- Cart Icon -->
+          <div class="cart-icon position-relative me-3">
+              <i class="fas fa-shopping-cart" id="cartIcon"></i>
+              <span id="cart-count" class="cart-count position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  0
+              </span>
+          </div>
+
+          <!-- Profile Icon -->
+          <div class="profile-icon" data-bs-toggle="modal" data-bs-target="#profileModal">
+              <i class="fas fa-user-circle"></i>
+          </div>
+      </div>
+  </div>
+</nav>
+
+<!-- Cart Dropdown -->
+<div class="cart-dropdown d-none" id="cartDropdown">
+  <div id="cartItems"></div>
+  <button class="btn btn-danger w-100 mt-2" id="clearCart">Clear Cart</button>
+</div>
+
+<!-- Profile Modal -->
+<div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="profileModalLabel">User Profile</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <div id="profileInfo" class="d-none">
+                  <h6>Profile Information:</h6>
+                  <p><strong>Name:</strong> <span id="profileName"></span></p>
+                  <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+                  
+                  <button type="button" class="btn btn-secondary mt-2" id="logoutButton">Log Out</button>
+              </div>
+              <form id="profileForm">
+                  <div class="mb-3">
+                      <label for="name" class="form-label">Name</label>
+                      <input type="text" class="form-control" id="name" required>
+                  </div>
+                  <div class="mb-3">
+                      <label for="email" class="form-label">Email</label>
+                      <input type="email" class="form-control" id="email" required>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Register</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+  <!-- Article Section -->
+  <div class="container mt-5 pt-5">
+    <h2 class="article-title1">Exercise for cats</h2>
+    <img src="image/Exercise banner.jpeg" alt="Kuncing bunting" class="article-image1">
+    <div class="article-content">
+      <p>Cats, with their natural grace and playful energy, are often mistaken for creatures that can easily get into top shape. However, just like us, cats also need regular exercise. From ensuring better weight control and body strength to providing mental stimulation and bonding time, fun cat exercise can offer many benefits. Remember, an active cat is a happy, healthy cat. So let’s explore some activities that can enrich your cat’s mental and physical well-being.</p>
+
+        <h3><strong>Cat wheel</strong></h3>>
+        <p>If you have enough space, a cat wheel is a great exercise for cats. Similar to a giant hamster wheel, a cat wheel allows your cat to unleash their inner agility. Start with short training sessions on the cat wheel, plenty of cat treats, and positive reinforcement. Once your cat gets the hang of it, they can run around to their heart's content.</p>
+
+        <h3><strong>Chasing the red dot</strong></h3>
+        <p>A timeless favorite! Laser pointers can make your cat jump, run and pounce to get the elusive red dot. Remember, keep these cat exercise sessions short to avoid frustration and always end the session by giving your furry friend a physical toy to catch as a satisfying “reward.”</p>
+
+        <h3><strong>Iteractive cat toys</strong></h3>
+        <p>From battery-operated toys that mimic prey to toys that are easy to hit with fur or rope, interactive cat toys are the best for exercising cats to keep your pet engaged with activities even when you're busy. The variety of textures and movements will provide endless entertainment for your cat.</p>
+      
+        <h3><strong>Puzzle feeder</strong></h3>
+        <p>Skip the boring food bowls and introduce a cat puzzle feeder. This clever gadget gets cats working hard to get their treats, sparking their hunting instincts and providing mental stimulation along with exercise.</p>
+
+        <h3><strong>Catnip madness</strong></h3>
+        <p>Sprinkling catnip on toys or a designated catnip zone can spark your cat's playful energy. Not all cats respond to catnip, but those that do will enjoy it by rolling, chasing, and wrestling with more enthusiasm.</p>
+        
+        <h3><strong>Cat treadmill</strong></h3>
+        <p>A specially designed cat treadmill is perfect for cats that need a more intense workout or enjoy a brisk walk. Start slowly and always under supervision, providing plenty of encouragement through treats and praise to ensure your cat enjoys the cat treadmill. Cat treats are more than just a tasty treat, they are also a key component in keeping your cat active and healthy. That’s why, at Temptations™, we pack a lot of nutrition into a delicious, single-serving treat. Cat treats are formulated to satisfy your cat’s appetite and contribute to their overall well-being.</p>
+        
+        <h3><strong>Playtime with you</strong></h3>
+        <p>Spend some dedicated play time with your cat every day. Use a feather stick, a rope, or any toy your cat likes to chase or hit. Your enthusiastic participation will encourage your fur baby to move and have fun at the same time</p>
+        
+        <h3><strong>Hide the dish</strong></h3>
+        <p>Hide small treats or biscuits around your home in various places to make your cat look for them. In addition to encouraging movement, this also stimulates your cat's sense of smell.</p>
+        
+        <h3><strong>Play with ropes</strong></h3>
+        <p>Grab a piece of string or yarn and watch your cat play happily! Dragging the string or yarn on the floor, dangling it over your cat's head or flicking it at random will attract your cat's interest and encourage them to pounce and chase.</p>
+        
+        <h3><strong>Rope training</strong></h3>
+        <p>If your cat loves to roam outside and you have a safe, enclosed space, try leash training. Short walks can provide new opportunities for sights, smells, and exercise for your indoor feline, but you need to keep them safe at all times.</p>
+
+        <h3><strong>Importants thing to remember</strong></h3>
+        <ul>
+
+          <li><Strong>Start slowly</Strong></li>
+          <p>Especially with older or overweight cats, start with short sessions of cat exercise and gradually increase playtime</p>
+          
+          <li><Strong>Pay attention to your cat</Strong></li>
+          <p>Find out what your cat likes and dislikes. Some prefer chasing, some like wrestling, so tailor the exercise to their preferences.</p>        
+          
+          <li><Strong>Priority safety</Strong></li>
+          <p>Make sure the play area is safe and always supervise your cat when using toys with strings or other sticky items.</p>
+
+        </ul>
+
+        <p>With a little creativity and dedication, incorporating cat exercise into your cat's routine will pay off with a happier, healthier, and more entertaining cat.</p>
+
+        <h3><strong>Frequently ask question</strong></h3>
+        <ul>
+
+          <li><strong>Do cats like exercise?</strong></li>
+          <p>Cats have a natural hunting instinct, so cat exercise that encourages play will keep them interested. Short, energetic bursts of activity mimic the way cats play and hunt in the wild.</p>
+
+          <li><strong>How much exercise does a cat need?</strong></li>
+          <p>Aim for two or three short play sessions (about 10-15 minutes each), each day. Adjust sessions based on your cat's age, health, and overall energy level.</p>
+         
+          <li><strong>Why is exercise important for cats?</strong></li>
+          <p>Exercise is important for cats! Exercise fights obesity, reduces boredom, improves mental health, and strengthens the bond between you and your fur baby.</p>
+          
+          <li><strong>How to create an effective cat exercise plan?</strong></li>
+          <p>Start with short play sessions with toys that mimic prey movements (fur, laser pointers). Provide vertical spaces (cat runs) and puzzle feeders for mental stimulation</p>
+        </ul>
+      </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h4>Contact Us</h4>
+        <p><i class="fas fa-envelope"></i> Email: MeowMart@gmail.com</p>
+        <p><i class="fas fa-phone"></i> Phone: 016-9318060</p>
+      </div>
+      <div class="footer-section">
+        <h4>Follow Us</h4>
+        <a href="https://www.facebook.com/maocatfe/" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/maocatfe/" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="https://x.com/shopcatsapp" class="social-link"><i class="fab fa-twitter"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Meow Mart. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
